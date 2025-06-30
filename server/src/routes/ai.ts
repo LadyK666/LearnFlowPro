@@ -546,7 +546,7 @@ async function callAIAPI_Tool(prompt: string, model: string, tool: string): Prom
 // 调用硅流AI API
 async function callAIAPI(prompt: string, model: string, tool: string): Promise<{ message: string }> {
   try {
-    const token = process.env.SILICONFLOW_API_KEY || 'sk-hjolxqxzjpqflkuivczwqujgtrmylaqocfliqdzsyszoqcia';
+    const token = process.env.SILICONFLOW_API_KEY || '';
     console.log("当前 tool 是：", tool);
 
     let prompt_tool = `你是一个智能任务管理助手，请根据用户的需求提供帮助。`;
