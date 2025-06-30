@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model task {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?   @db.Text
+  category    String
+  priority    Int
+  completed   Boolean   @default(false)
+  isToday     Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  authorId    Int
+  completedAt DateTime?
+  todayOrder  Int?
+
+  @@index([authorId], map: "Task_authorId_fkey")
+}
+
+model user {
+  id            Int       @id @default(autoincrement())
+  email         String    @unique(map: "User_email_key")
+  name          String?
+  lastLoginDate DateTime?
+  password      String
+}
+
+model AiChat {
+  id        Int      @id @default(autoincrement())
+  prompt    String   @db.Text
+  response  String   @db.Text
+  model     String
+  tool  String
+  finish    Boolean @default(false)
+  createdAt DateTime @default(now())
+
+  authorId  Int
+  @@index([authorId], map: "AiChat_authorId_fkey")
+}
+

@@ -1,0 +1,1 @@
+{"version":3,"file":"simpleTokenManager.d.ts","sourceRoot":"","sources":["../src/simpleTokenManager.ts"],"names":[],"mappings":"AAIA,qBAAa,kBAAkB;IAC7B,OAAO,CAAC,UAAU,CAAuB;IACzC,OAAO,CAAC,SAAS,CAAS;;IAS1B;;OAEG;IACH,QAAQ,IAAI,MAAM;IAiBlB;;OAEG;IACH,SAAS,CAAC,KAAK,EAAE,MAAM,GAAG,IAAI;IAU9B;;OAEG;IACH,cAAc,CAAC,QAAQ,EAAE,CAAC,KAAK,EAAE,MAAM,KAAK,IAAI,GAAG,IAAI;CAcxD"}

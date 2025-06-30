@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "My-Day Token Sync",
+  "version": "1.0",
+  "description": "自动同步My-Day应用的JWT Token到MCP服务器",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:5174/*",
+    "http://localhost:4000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:5174/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "My-Day Token Sync"
+  }
+} 

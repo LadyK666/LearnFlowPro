@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "my-day-tasks": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "D:/Desktop/大二课程/工程实训/my-day - 副本/mcp-server",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+} 
